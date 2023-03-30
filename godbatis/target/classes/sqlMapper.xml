@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace先随意写⼀个-->
+
+<mapper namespace="user">
+    <!--insert sql：保存⼀个汽⻋信息-->
+    <insert id="insertUser">
+        insert into user values (#{id},#{name},#{age})
+    </insert>
+    <select id="selectById" resultType="org.adg.ibatis.pojo.User">
+        select * from user where id = #{id}
+    </select>
+
+
+</mapper>
